@@ -14,7 +14,7 @@ rm -rf target/linux/generic target/linux/rockchip/!(Makefile)
 svn export https://github.com/coolsnowwolf/lede/trunk/target/linux/generic target/linux/generic
 svn checkout https://github.com/coolsnowwolf/lede/trunk/target/linux/rockchip target/linux/rockchip
 
-curl -sfL https://raw.githubusercontent.com/coolsnowwolf/lede/master/include/kernel-5.15 -o include/kernel-5.15
+curl -sfL https://raw.githubusercontent.com/coolsnowwolf/lede/master/include/kernel-6.1 -o include/kernel-6.1
 
 curl -sfL https://raw.githubusercontent.com/coolsnowwolf/lede/master/package/kernel/linux/modules/video.mk -o package/kernel/linux/modules/video.mk
 
@@ -32,4 +32,4 @@ sed -i 's/Ariaboard/光影猫/' target/linux/rockchip/image/armv8.mk
 
 echo '
 CONFIG_SENSORS_PWM_FAN=y
-' >> ./target/linux/rockchip/armv8/config-5.15
+' >> ./target/linux/rockchip/armv8/config-6.1
